@@ -2,22 +2,29 @@ void setup() {
  size(500, 500); 
 }
 
-void draw() {
+
+void draw(){
+  drawCone(200,300);
+  drawCone(100,200);
+}
+
+void drawCone(int x, int y) {
   // make some ice cream!
   noStroke(); 
   fill(200, 100, 50);
-  triangle(250, 400, 290, 280, 210, 280);
-  fill(240, 160, 190);
-  ellipse(250, 250, 100, 100);
-  fill(240, 160, 190);
-  ellipse(250, 290, 100, 30); 
-  fill(255, 235, 160);
-  ellipse(250, 180, 100, 100);
-  fill(255, 235, 160);
-  ellipse(250, 220, 100, 30);
-  fill(250, 78, 78);
-  ellipse(210, 135, 25, 25);
+  triangle(x, y + 150, x + 40, y + 40, x - 40, y + 30);
   
+  //1st two scoops
+  fill(240, 160, 190);
+  // x and y are 250
+  ellipse(x, y, 100, 100);
+  ellipse(x, y + 40, 100, 30); 
+  // 2nd two scoops
+  fill(255, 235, 160);
+  ellipse(x, y - 70, 100, 100);
+  ellipse(x, y - 30, 100, 30);
+  
+ 
   
 }
 
